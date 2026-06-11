@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家族の家事シェアアプリ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <h1>🏡 家族の家事シェアボード</h1>
+    <p class="subtitle">終わったら「完了」を押そう！</p>
+
+    <section class="routine-section">
+        <h2>✨ 今日のルーティン家事</h2>
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>担当</th>
+                    <th>操作 / 状態</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="row-kaidashi">
+                    <td class="task-name">🛒 買物</td>
+                    <td>
+                        <select class="user-select" id="user-kaidashi">
+                            <option value="虎">虎</option>
+                            <option value="加">加</option>
+                            <option value="麟">麟</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn-complete" id="btn-kaidashi">完了</button>
+                        <span class="status-time" id="time-kaidashi">--/-- --:--</span>
+                    </td>
+                </tr>
+
+                <tr id="row-roomba">
+                    <td class="task-name">🤖 ルンバ</td>
+                    <td>
+                        <select class="user-select" id="user-roomba">
+                            <option value="麟" selected>麟</option>
+                            <option value="虎">虎</option>
+                            <option value="加">加</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn-complete" id="btn-roomba">完了</button>
+                        <span class="status-time" id="time-roomba">--/-- --:--</span>
+                    </td>
+                </tr>
+
+                <tr id="row-toilet">
+                    <td class="task-name">🚽 トイレ掃除</td>
+                    <td>
+                        <select class="user-select" id="user-toilet">
+                            <option value="麟">麟</option>
+                            <option value="虎">虎</option>
+                            <option value="加">加</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn-complete" id="btn-toilet">完了</button>
+                        <span class="status-time" id="time-toilet">--/-- --:--</span>
+                    </td>
+                </tr>
+
+                <tr id="row-cat">
+                    <td class="task-name">🐈 猫トイレ</td>
+                    <td>
+                        <select class="user-select" id="user-cat">
+                            <option value="虎">虎</option>
+                            <option value="加">加</option>
+                            <option value="麟">麟</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn-complete" id="btn-cat">完了</button>
+                        <span class="status-time" id="time-cat">--/-- --:--</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="free-section">
+        <h2>📝 自由なお願いごと（突発の頼み事など）</h2>
+        
+        <div class="input-area">
+            <select id="free-uname">
+                <option value="虎">虎</option>
+                <option value="加">加</option>
+                <option value="麟">麟</option>
+            </select>
+            <input type="text" id="free-text" placeholder="頼みたいことを入力（例: マヨネーズ買ってきて！）">
+            <button id="free-send">送信</button>
+        </div>
+
+        <div id="free-output">
+            </div>
+    </section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="module" src="js/test.js"></script> 
+
+</body>
+</html>

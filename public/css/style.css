@@ -1,0 +1,188 @@
+/* ===================================================
+   家族の家事シェアアプリ 全体レイアウト
+   =================================================== */
+
+/* アプリ全体の背景と文字の基本設定 */
+body {
+    background-color: #f4f6f8; /* 目に優しい薄いグレー */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* 以前学んだ鉄板フォント設定！ */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* アプリを中央に寄せる外枠（コンテナ） */
+.app-container {
+    background-color: #ffffff; /* 中身は白ボード風に */
+    width: 100%;
+    max-width: 600px; /* スマホやタブレットで見やすい横幅 */
+    padding: 30px 10px;
+    border-radius: 16px; /* 角を丸くして優しい印象に */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* ほんのり影をつけて立体感 */
+}
+
+/* タイトル部分 */
+h1 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    white-space: nowrap;     /* どんなに画面が狭くても絶対に途中で改行しない */
+    letter-spacing: -0.05em; /* 文字の間隔をほんの少しだけキュッと詰める */
+}
+
+.subtitle {
+    font-size: 14px;
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    white-space: nowrap;     /* どんなに画面が狭くても絶対に途中で改行しない */
+}
+
+h2 {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db; /* 見出しの左側に青いアクセント線 */
+    padding-left: 10px;
+}
+
+section {
+    margin-bottom: 40px; /* セクションごとの隙間 */
+}
+
+/* ===================================================
+   1. 固定ルーティン（表形式）のデザイン
+   =================================================== */
+.task-table {
+    width: 100%;
+    border-collapse: collapse; /* 線の隙間をなくす */
+    margin-top: 10px;
+}
+
+.task-table th, 
+.task-table td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* 横線だけを入れるすっきりスタイル */
+    font-size: 15px;
+}
+
+.task-table th {
+    background-color: #f8f9fa;
+    color: #7f8c8d;
+    font-weight: bold;
+}
+
+.task-name {
+    font-weight: bold;
+}
+
+/* 担当を選ぶプルダウン */
+.user-select, #free-uname {
+    padding: 6px 10px;
+    border: 1px solid #ccd1d9;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 完了ボタンの基本（緑色ベース） */
+.btn-complete {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-complete:hover {
+    background-color: #27ae60; /* マウスを乗せると少し濃くなる */
+}
+
+/* 完了した時の時間表示 */
+.status-time {
+    display: block;
+    font-size: 11px;
+    color: #95a5a6;
+    margin-top: 4px;
+}
+
+/* ===================================================
+   2. 自由なお願いごと（チャット）のデザイン
+   =================================================== */
+.input-area {
+    display: flex;
+    gap: 8px; /* 要素同士の隙間 */
+    margin-bottom: 20px;
+}
+
+#free-text {
+    flex: 1; /* 入力欄を可能な限り横に広げる */
+    padding: 8px 12px;
+    border: 1px solid #ccd1d9;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#free-send {
+    background-color: #3498db; /* 送信は綺麗な青色 */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#free-send:hover {
+    background-color: #2980b9;
+}
+
+/* お願いごとが並ぶエリア */
+#free-output {
+    background-color: #fafbfc;
+    border: 1px solid #e6e9ed;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 80px;
+}
+
+/* 追加されたお願いごとのカード */
+.free-task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    margin-bottom: 10px;
+    border-left: 4px solid #f1c40f; /* 左側に黄色い付箋風の線を引く */
+}
+
+.free-task-item:last-child {
+    margin-bottom: 0;
+}
+
+/* 自由なお願いの「完了（消去）」ボタン（赤色ベース） */
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
