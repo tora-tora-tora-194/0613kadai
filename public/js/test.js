@@ -108,7 +108,7 @@ function getFormattedDate() {
 
 // ① 買い出しの完了ボタン
 $("#btn-kaidashi").on("click", function () {
-    const user = $("#user-kaidashi").val(); // 選択された担当（虎・麟・加）
+    const user = $("#user-kaidashi").val(); // 選択された担当（T・R・K）
     const time = getFormattedDate();        // 今の時間
 
     // Firebaseの "routine_tasks/kaidashi" の中に上書き保存
